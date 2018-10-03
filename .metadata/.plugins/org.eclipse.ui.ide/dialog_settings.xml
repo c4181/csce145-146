@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\Users\c4181\Documents\MEGAsync\eclipse-workspace\Homework10"/>
+		<item value="C:\Users\c4181\Documents\MEGAsync\eclipse-workspace\Lab10"/>
+		<item value="C:\Users\c4181\Documents\MEGAsync\eclipse-workspace\Lab09"/>
+		<item value="C:\Users\c4181\Documents\MEGAsync\eclipse-workspace\Lab08"/>
+		<item value="C:\Users\c4181\Documents\MEGAsync\eclipse-workspace\Homework01"/>
+		<item value="C:\Users\c4181\Documents\MEGAsync\eclipse-workspace\Homework06"/>
+		<item value="C:\Users\c4181\Documents\MEGAsync\eclipse-workspace\Lab07"/>
+		<item value="C:\Users\c4181\Documents\MEGAsync\eclipse-workspace\Lab06"/>
+		<item value="C:\Users\c4181\Documents\MEGAsync\eclipse-workspace\Lab03"/>
+		<item value="C:\Users\c4181\Documents\MEGAsync\eclipse-workspace\Showcase Showdown"/>
+		<item value="C:\Users\c4181\Documents\MEGAsync\eclipse-workspace\Lab02"/>
+		<item value="C:\Users\c4181\Documents\MEGAsync\eclipse-workspace\Lab00"/>
+		<item value="C:\Users\c4181\Documents\MEGAsync\eclipse-workspace\Pokemon Battle Simulator"/>
+	</list>
+	<section name="ExternalProjectImportWizard">
+	</section>
+	<section name="NewWizardAction">
+	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item value="440" key="DIALOG_X_ORIGIN"/>
+		<item value="286" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

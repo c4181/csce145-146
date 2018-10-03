@@ -1,0 +1,157 @@
+/*
+ * Written by Christopher Moyer
+ */
+
+public class GenCircularLinkedList <T> {
+	private class ListNode {
+		private T data;
+		private ListNode link;
+		
+		public ListNode()
+		{
+			data = null;
+			link = null;
+		}
+		public ListNode(T aData, ListNode aLink)
+		{
+			data = aData;
+			link = aLink;
+		}
+	}
+	
+	private ListNode head;
+	private ListNode current;
+	private ListNode previous;
+	private ListNode tail;
+	
+	public GenCircularLinkedList()
+	{
+		head = current = previous = tail = null;
+	}
+	//Moves to next node if the next node is not null
+	public void goToNext()
+	{
+		if(current.link!=null)
+		{
+			previous = current;
+			current = current.link;
+		}	
+	}
+	/*
+	 * Moves through list to find node before previous, 
+	 * Sets the new previous node to that, 
+	 * & current to the node after new previous
+	 */
+	public void goToPrevious()
+	{
+		ListNode temp = head;
+		if(previous!=null)
+		{
+			while(temp.link != previous)
+			{
+				temp = temp.link;
+			}
+			 previous = temp;
+		}
+	}
+	//Gets data at current node if the current node is not null
+	public T getDataAtCurrent()
+	{
+		if(current!=null)
+			return current.data;
+		else
+			return null;
+	}
+	//Sets data at the current node
+	public void setDataAtCurrent(T aData)
+	{
+		current.data = aData;
+	}
+	//Inserts a new node after the tail
+	public void insert(T aData)
+	{
+		ListNode newNode = new ListNode(aData,null);
+		//List is empty
+		if(head==null)
+		{
+			head = newNode;
+			current = head;
+			tail = head;
+			return;
+		}
+		//List is not empty
+		tail.link = newNode;
+		tail = newNode;
+		tail.link = head;
+	}
+	public void insertAfterCurrent(T aData)
+	{
+		ListNode newNode = new ListNode(aData,null);
+		//Current is either head or in the middle
+		if(current!=tail)
+		{
+			newNode.link = current.link;
+			current.link = newNode;
+		}
+		//Current is the tail
+		else
+		{
+			newNode.link = head;
+			tail.link = newNode;
+			tail = newNode;
+		}
+	}
+	public void deleteCurrentNode()
+	{
+		//Only 1 node is in the list
+		if(current == current.link)
+		{
+			head = current = previous = tail = null;
+		}
+		//Current is head
+		else if(current == head)
+		{
+			tail.link = head.link;
+			head = head.link;
+			current = head;
+		}
+		//Current is tail
+		else if(current==tail)
+		{
+			previous.link = head;
+			tail = previous;
+		}
+		//Current is in the middle
+		else
+		{
+			previous.link = current.link;
+			current = current.link;
+		}
+	}
+	public void showList()
+	{
+		ListNode temp = head;
+		do
+		{
+			System.out.println(temp.data);
+			temp = temp.link;
+		}
+		while(temp!=head);
+		System.out.println();
+	}
+	//Checks if passed data is in the list
+	public boolean inList(T aData)
+	{
+		ListNode temp = head;
+		boolean inList = false;
+		do
+		{
+			if(temp.data.equals(aData))
+				return true;
+			else
+				temp = temp.link;
+		}
+		while(temp!=head);
+		return false;
+	}
+}

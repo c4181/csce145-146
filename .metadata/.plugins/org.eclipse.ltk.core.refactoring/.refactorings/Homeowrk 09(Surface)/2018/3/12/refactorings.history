@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 4 elements to &apos;Homework7/src&apos;&#x0D;&#x0A;- Original project: &apos;Homeowrk 09(Surface)&apos;&#x0D;&#x0A;- Destination element: &apos;Homework7/src&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     Shape.java&#x0D;&#x0A;     Circle.java&#x0D;&#x0A;     Rectangle.java&#x0D;&#x0A;     Triangle.java" description="Copy compilation units" destination="=Homework7/src" element1="/src&lt;{Shape.java" element2="/src&lt;{Circle.java" element3="/src&lt;{Rectangle.java" element4="/src&lt;{Triangle.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1521763970213" units="4" version="1.0"/>
+</session>
